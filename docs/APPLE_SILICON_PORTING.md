@@ -46,15 +46,30 @@ Bringing a 2005 Windows game natively to Apple Silicon requires replacing all Wi
 
 ## 4. Input & Modern Controller Support
 
-The original game only supported DirectInput 8 (which lacked modern trigger rumble, deadzone calibration, and proper XInput analog trigger mappings for acceleration/braking).
+The original 2005 PC release only supported DirectInput 8 (which lacked modern trigger rumble, deadzone calibration, and proper analog trigger travel).
 
-### Upgrading to `GameController.framework` / SDL3:
-- Full out-of-the-box support for:
-  - **Sony DualSense / DualShock 4** (with Bluetooth connection).
-  - **Xbox Wireless Controllers**.
-  - **Nintendo Switch Pro Controllers**.
-  - **MacBook Pro Keyboard & Trackpad**.
-- Analog triggers (L2/R2) correctly mapped to analog throttle and progressive braking.
+### Sony DualShock 4 (PS4) Mapping on Apple Silicon
+The DualShock 4 is natively supported out of the box by macOS (`GameController.framework`) with full vibration/rumble support over both Bluetooth and USB:
+
+```
+                [ L2: Progressive Brake ]           [ R2: Progressive Throttle ]
+                [ L1: Clutch / Action   ]           [ R1: Reset Car            ]
+                      \                                   /
+            [ D-Pad ]  \                                 /  [ Triangle: Change Camera ]
+     Up: Engage Pursuit \                               /   [ Square: Look Back      ]
+   Down: Speedbreaker    +-----------------------------+    [ Circle: Nitrous (NOS)  ]
+                          |  [SHARE]   [Touch]  [OPT]  |    [ Cross: E-Brake / Enter ]
+                          |                            |
+                          |    (L3)            (R3)    |
+                          |  Steering      Speedbreaker|
+                          +----------------------------+
+```
+
+#### How to Pair DualShock 4 to macOS:
+1. Turn off the controller.
+2. Hold down the **PS Button + SHARE Button** simultaneously for ~3 seconds until the light bar blinks rapidly in white (pairing mode).
+3. Open **System Settings → Bluetooth** on your Mac and click **Connect** next to *"DUALSHOCK 4 Wireless Controller"*.
+4. Launch SpeedBreaker — it will detect the controller immediately with analog triggers and haptic rumble enabled.
 
 ---
 
