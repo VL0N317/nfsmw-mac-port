@@ -1,0 +1,30 @@
+# Game Assets & Dumps
+*.iso
+*.bin
+*.bun
+*.vp6
+*.big
+*.viv
+speed.exe
+SPEED.EXE
+
+# Build directories
+build/
+bin/
+dist/
+*.o
+*.obj
+*.dylib
+*.a
+
+# macOS system files
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.swp
+*~
