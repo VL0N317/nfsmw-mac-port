@@ -24,11 +24,21 @@ On Apple Silicon (ARM64 macOS), there are two distinct paths forward:
 
 ## 📂 Repository Contents
 
+- [`docs/BENCHMARK_AND_HARDWARE.md`](docs/BENCHMARK_AND_HARDWARE.md) – **Verified hardware profile & benchmark** on MacBook Pro 16" (Apple M1 Pro, 16GB, Liquid Retina XDR 120Hz).
 - [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) – Subsystem breakdown of EA's EAGL3 engine, memory layout, game loop, and physics.
 - [`docs/REVERSE_ENGINEERING.md`](docs/REVERSE_ENGINEERING.md) – Disassembly guide for `speed.exe`, calling conventions, SafeDisc DRM bypass, and symbol mapping.
 - [`docs/APPLE_SILICON_PORTING.md`](docs/APPLE_SILICON_PORTING.md) – Technical guide on ARM64 translation, Metal/MoltenVK rendering, audio replacement, and APFS case sensitivity.
 - [`docs/ASSET_EXTRACTION.md`](docs/ASSET_EXTRACTION.md) – How to extract assets legally from the original PC CD/DVD or Xbox 360 disc on macOS.
 - [`scripts/check_assets.py`](scripts/check_assets.py) – Asset validation tool to check game file integrity and case-sensitivity issues on macOS.
+
+---
+
+## 💻 Verified Native App Status on Deeraj's MacBook Pro (M1 Pro)
+
+- **Engine:** `SpeedBreaker v0.2.0 (Mach-O 64-bit arm64)` installed to `/Applications/SpeedBreaker.app`
+- **SoC:** Apple M1 Pro (10-core CPU, 16-core GPU, Metal 4)
+- **Target Resolution:** Up to 3456 × 2234 Liquid Retina XDR with 120Hz Smooth Motion
+- **Game Data Directory:** `~/Library/Application Support/SpeedBreaker`
 
 ---
 
